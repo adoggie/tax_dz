@@ -1,0 +1,5 @@
+@Controls@TWinControl@FindChildControl$qqrx17System@AnsiString
+
+
+@Controls@TWinControl@GetControlCount$qqrv
+@Controls@TWinControl@GetControl$qqri

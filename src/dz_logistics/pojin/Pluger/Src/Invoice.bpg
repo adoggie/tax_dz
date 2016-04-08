@@ -1,0 +1,27 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Pluger.dll PlugerInterface.dll Caller.exe 
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Pluger.dll: Pluger\Pluger.dpr
+  $(DCC)
+
+PlugerInterface.dll: PlugerInterface\PlugerInterface.dpr
+  $(DCC)
+
+Caller.exe: Caller\Caller.dpr
+  $(DCC)
+
+
+

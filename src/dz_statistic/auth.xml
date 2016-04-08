@@ -1,0 +1,32 @@
+
+<?xml version="1.0" encoding="GBK" ?>
+<!--DOCTYPE RZ00100 SYSTEM "RZ00100.dtd"-->
+<body>
+	<head>
+	<code>RZ00100</code>
+	<title>增值税专用发票抵扣联信息企业采集待认证数据</title>
+		<nsr>3100000000001</nsr>
+		<qymc>shanghai quan ge</qymc>
+		<scrq>20130222</scrq>
+		<rows>7</rows>
+	</head>
+	<data>
+	
+
+
+
+	<row id="7">
+		<dm>3100123170</dm>
+		<hm>9118</hm>
+		<gf>310109765978131</gf>
+		<xf>3100000000001</xf>
+		<kr>2013-02-27</kr>
+		<je>27000</je>
+		<se>4590</se>
+	<mw>81439**&gt;&lt;&lt;9&lt;5126-242+2-&lt;84/363&gt;553-/-&lt;2//31--18&gt;/6&gt;+38&lt;+1*79&gt;6/74&gt;5-/55126-242+26&lt;31987013&gt;490-&lt;&lt;//+4686*&lt;9-</mw>
+		<sy>waiting...</sy>	
+		<bb>11</bb>
+	</row>
+
+	</data>
+</body>

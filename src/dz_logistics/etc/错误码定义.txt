@@ -1,0 +1,13 @@
+  ERROR_SUCCESS                       = 00000;  // 成功
+  ERROR_INVALID_INV_CODE              = 00201;  // 发票代码不存在 
+  ERROR_BUFFER_TOO_SMALL              = 00202;  // buffer太小
+  ERROR_INVALID_SELLER_BANK_ACCOUNT   = 00301;  // 销方银行帐号 不匹配
+  ERROR_INVALID_FIND_MONTH            = 00401;  // 查份月份 不匹配
+  ERROR_INVALID_PARAMETER             = 00888;  // 参数错误
+  ERROR_UNKNOWN                       = 00999;
+  ERROR_PLUGER_UNINITIALIZED          = 10000;  // 未初始化
+  ERROR_KP_NOT_FIND                   = 10001;  // 开票软件没有运行
+  ERROR_INJECT_FAIL                   = 10002;  // 注入失败
+  ERROR_KP_CLOSED                     = 10003;  // 在初始化之后,开票软件被关闭了
+  ERROR_KP_NOT_LOGGED_IN              = 10004;  // 开票软件未登录
+  ERROR_RESERVED                      = 20000;  // 预留的,未实现的

@@ -1,0 +1,1002 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 12">
+<link id=Main-File rel=Main-File href="../自动化开票功能定义和接口.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(1);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../自动化开票功能定义和接口.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link=blue vlink=purple class=xl67>
+
+<table border=0 cellpadding=0 cellspacing=0 width=1368 style='border-collapse:
+ collapse;table-layout:fixed;width:1026pt'>
+ <col class=xl67 width=72 span=9 style='width:54pt'>
+ <col class=xl67 width=72 style='width:54pt'>
+ <col class=xl67 width=72 span=9 style='width:54pt'>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 width=72 style='height:16.5pt;width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+  <td class=xl67 width=72 style='width:54pt'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>1</td>
+  <td class=xl71>名称</td>
+  <td class=xl71>inv_reset</td>
+  <td colspan=16 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>void inv_reset();</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=7 style='mso-ignore:colspan'>重置函数，一旦调用将撤销之前所有的状态界面，回退到为启动开票状态</td>
+  <td colspan=10 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67>N/A</td>
+  <td colspan=16 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl67>N/A</td>
+  <td colspan=16 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>2</td>
+  <td class=xl71>名称</td>
+  <td class=xl71 colspan=2 style='mso-ignore:colspan'>inv_open</td>
+  <td colspan=15 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>int inv_open()</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>系统初始化加载启动开票软件，</td>
+  <td colspan=13 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 启动失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl67>N/A</td>
+  <td colspan=16 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>3</td>
+  <td class=xl71>名称</td>
+  <td class=xl71 colspan=2 style='mso-ignore:colspan'>inv_close</td>
+  <td colspan=15 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>int inv_close()</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>关闭开票软件</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl67>N/A</td>
+  <td colspan=16 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>4</td>
+  <td class=xl71>名称</td>
+  <td class=xl71>inv_lock</td>
+  <td colspan=16 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>int inv_lock()</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=6 style='mso-ignore:colspan'>锁定开票软件，隐藏或者最小化显示，禁止用户进行操作</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 启动失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl67>N/A</td>
+  <td colspan=16 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>5</td>
+  <td class=xl71>名称</td>
+  <td class=xl71 colspan=2 style='mso-ignore:colspan'>inv_unlock</td>
+  <td colspan=15 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>int inv_unlock()</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=6 style='mso-ignore:colspan'>解锁开票软件，显示出开票软件界面，把控制权交还给用户</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 启动失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl67>N/A</td>
+  <td colspan=16 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>6</td>
+  <td class=xl71>名称</td>
+  <td class=xl71 colspan=2 style='mso-ignore:colspan'>inv_taxinfo</td>
+  <td colspan=15 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=10 style='mso-ignore:colspan'>int inv_taxinfo(int <font
+  class="font8">invoice_type</font><font class="font7">,char* </font><font
+  class="font8">code</font><font class="font7">,char* </font><font class="font8">number,char*
+  stock,char* taxcode,char* limit</font><font class="font7">)</font></td>
+  <td colspan=7 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>获取卡信息</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl69>名称</td>
+  <td class=xl69>　</td>
+  <td class=xl69>方向</td>
+  <td class=xl69>类型</td>
+  <td class=xl69>长度</td>
+  <td class=xl69>说明</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>invoice_type</td>
+  <td class=xl67>IN</td>
+  <td class=xl67>int</td>
+  <td class=xl67 align=right>4</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>开票类型 0 - 普通发票； 1 - 专用发票</td>
+  <td colspan=8 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>code</td>
+  <td class=xl67></td>
+  <td class=xl67>OUT</td>
+  <td class=xl67>string</td>
+  <td class=xl67 align=right>40</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>要开具发票的十位代码<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td colspan=9 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>number</td>
+  <td class=xl67></td>
+  <td class=xl67>OUT</td>
+  <td class=xl67>string</td>
+  <td class=xl67 align=right>40</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>要开具发票的号码</td>
+  <td colspan=10 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl70>stock</td>
+  <td class=xl70></td>
+  <td class=xl70>OUT</td>
+  <td class=xl70>string</td>
+  <td class=xl70 align=right>40</td>
+  <td class=xl70 colspan=3 style='mso-ignore:colspan'>卡内剩余可用发票数量</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>红色部分可选</td>
+  <td colspan=7 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl70>taxcode</td>
+  <td class=xl70></td>
+  <td class=xl70>OUT</td>
+  <td class=xl70>string</td>
+  <td class=xl70 align=right>40</td>
+  <td class=xl70>卡内税号</td>
+  <td colspan=2 class=xl70 style='mso-ignore:colspan'></td>
+  <td colspan=9 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl70>limit</td>
+  <td class=xl70></td>
+  <td class=xl70>OUT</td>
+  <td class=xl70>string</td>
+  <td class=xl70 align=right>40</td>
+  <td class=xl70 colspan=2 style='mso-ignore:colspan'>开票最大金额</td>
+  <td class=xl70></td>
+  <td colspan=9 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='page-break-before:always;height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>7</td>
+  <td class=xl71>名称</td>
+  <td class=xl71 colspan=2 style='mso-ignore:colspan'>inv_create</td>
+  <td colspan=15 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=16 style='mso-ignore:colspan'>int inv_create(int
+  invoice_type，int mode,int <font class="font8">type</font><font class="font7">,char
+  * bill，size_t bill_bufsize,char* </font><font class="font8">invoice_code</font><font
+  class="font7">,char* </font><font class="font8">invoice_number,char*
+  date,char* amount,char* tax</font><font class="font7">)</font></td>
+  <td class=xl67></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>开具一张发票</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>场景</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>inv_create已调用成功</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl69>名称</td>
+  <td class=xl69>　</td>
+  <td class=xl69>方向</td>
+  <td class=xl69>类型</td>
+  <td class=xl69>长度</td>
+  <td class=xl69>说明</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>invoice_type</td>
+  <td class=xl67>IN</td>
+  <td class=xl67>int</td>
+  <td class=xl68>4</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>开票类型 0 - 普通发票； 1 - 专用发票</td>
+  <td colspan=8 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>tax_flag</td>
+  <td class=xl67></td>
+  <td class=xl67>IN</td>
+  <td class=xl67>int</td>
+  <td class=xl68>4</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 -不含税 ； 1 - 含税</td>
+  <td class=xl70 colspan=2 style='mso-ignore:colspan'>通过界面按钮切换</td>
+  <td colspan=7 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>mode</td>
+  <td class=xl67></td>
+  <td class=xl67>IN</td>
+  <td class=xl67>int</td>
+  <td class=xl68>4</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>1 - 开票； 2 - 打印 ； 3 -
+  开票并打印</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>不存在单独 为 2的情况</td>
+  <td colspan=5 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>type</td>
+  <td class=xl67></td>
+  <td class=xl67>IN</td>
+  <td class=xl67>int</td>
+  <td class=xl68>4</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 -普通开票 ；1 - 负数发票；</td>
+  <td colspan=9 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>discount</td>
+  <td class=xl67></td>
+  <td class=xl67>IN</td>
+  <td class=xl67>float</td>
+  <td class=xl68>4</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>金额针对商品清单里面所有记录</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>折扣（小数保留3位)</td>
+  <td class=xl67></td>
+  <td class=xl67 colspan=5 style='mso-ignore:colspan'>小于1， 表示折扣率； 大于等于1表示折扣金额</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>bill</td>
+  <td class=xl67></td>
+  <td class=xl67>IN</td>
+  <td class=xl67>string</td>
+  <td class=xl68>变长</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>订单信息，包括商品清单列表</td>
+  <td class=xl70 colspan=3 style='mso-ignore:colspan'>见sheet【开票数据交换格式】</td>
+  <td colspan=6 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>bill_bufsize</td>
+  <td class=xl67>IN</td>
+  <td class=xl67>int</td>
+  <td class=xl68>4</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>传入缓冲区大小</td>
+  <td colspan=10 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>invoice_code</td>
+  <td class=xl67>OUT</td>
+  <td class=xl67>string</td>
+  <td class=xl68>40</td>
+  <td class=xl67>发票代码</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>invoice_number</td>
+  <td class=xl67>OUT</td>
+  <td class=xl67>string</td>
+  <td class=xl68>40</td>
+  <td class=xl67>发票号码</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>data</td>
+  <td class=xl67></td>
+  <td class=xl67>OUT</td>
+  <td class=xl67>string</td>
+  <td class=xl68>40</td>
+  <td class=xl67>开票日期</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>amount</td>
+  <td class=xl67></td>
+  <td class=xl67>OUT</td>
+  <td class=xl67>string</td>
+  <td class=xl68>40</td>
+  <td class=xl67>总金额</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>tax</td>
+  <td class=xl67></td>
+  <td class=xl67>OUT</td>
+  <td class=xl67>string</td>
+  <td class=xl68>40</td>
+  <td class=xl67>税额</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>操作说明</td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=5 style='mso-ignore:colspan'>普通发票和专用发票的切换通过主界面菜单切换</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=5 style='mso-ignore:colspan'>商品项目超过8条，直接在【清单】界面中录入</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>负数发票：</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=8 style='mso-ignore:colspan'>专用发票输入的是通知单号（16位），应考虑情况：
+  数据录入错误，重复开具</td>
+  <td colspan=8 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=12 style='mso-ignore:colspan'>普通发票输入的是某一张已开具发票的发票代码和发票号码。
+  应考虑情况： 数据录入错误，发票号码错误，负数发票重复开具</td>
+  <td colspan=4 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=6 style='mso-ignore:colspan'>专用和普通发票均无订单信息输入，都会生成新发票编号</td>
+  <td colspan=10 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=7 style='mso-ignore:colspan'>不考虑数据库记录读取失败的情况，失败就直接返回开票错误101,102</td>
+  <td colspan=9 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=7 style='mso-ignore:colspan'>负数发票都要携带发票代码和发票号码，专用负数必须携带红冲号<span
+  style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td colspan=9 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=10 style='mso-ignore:colspan'>发票如果开具成功，能否从界面上提取出
+  【invoice_code,invoice_number,data,amount,tax】字段信息</td>
+  <td colspan=7 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>mode = 1</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>直接开票不打印</td>
+  <td colspan=13 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>mode = 3</td>
+  <td class=xl67 colspan=11 style='mso-ignore:colspan'>开票并打印，显示提示窗体，待用户确认之后返回。
+  ！！用户取消打印，返回也是succ，只要开票成功都返回succ</td>
+  <td colspan=4 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>mode = 2</td>
+  <td class=xl67>不存在</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>折扣处理</td>
+  <td class=xl67></td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>所有商品记录仅一条折扣，最后一行</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>discount =0 ，</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>表示无折扣操作</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>0&lt;discount&lt;=1</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>表示折扣率</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>1 &lt;discount</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>表示折扣金额</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>折扣处理在录入完所有商品信息之后进行</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=26 style='mso-height-source:userset;height:19.5pt'>
+  <td height=26 class=xl67 style='height:19.5pt'></td>
+  <td class=xl67>错误码：<span style='mso-spacerun:yes'>&nbsp;</span></td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 align=right>101</td>
+  <td class=xl67 colspan=7 style='mso-ignore:colspan'>普通发票（负数发票），输入的【发票代码】或【发票号码】不存在</td>
+  <td colspan=9 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 align=right>102</td>
+  <td class=xl67 colspan=5 style='mso-ignore:colspan'>专用发票（负数发票） ，输入的 通知单号 错误</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 align=right>103</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>订单商品信息错误</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 align=right>104</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>银行账号不匹配</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>订单中携带账号信息，检索匹配失败</td>
+  <td class=xl67 colspan=5 style='mso-ignore:colspan'>要求金税软件设置的账号信息与Erp系统完全一致</td>
+  <td colspan=5 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>8</td>
+  <td class=xl71>名称</td>
+  <td class=xl71 colspan=2 style='mso-ignore:colspan'>inv_cancel</td>
+  <td colspan=15 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=6 style='mso-ignore:colspan'>int inv_cancel(int <font
+  class="font8">invoice_type</font><font class="font7">,</font><font
+  class="font7">char* </font><font class="font8">invoice_number</font><font
+  class="font7">)</font></td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67>发票作废</td>
+  <td colspan=16 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>invoice_type</td>
+  <td class=xl67>IN</td>
+  <td class=xl67>int</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>开票类型 0 - 普通发票； 1 - 专用发票</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>此字段是可选，根据发票编号判别即可</td>
+  <td colspan=5 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>invoice_number</td>
+  <td class=xl67>IN</td>
+  <td class=xl67>string</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>发票代码（系统唯一)</td>
+  <td colspan=10 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>错误码：</td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 align=right>201</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>发票代码不存在</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>操作说明</td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=10 style='mso-ignore:colspan'>输入发票类型和发票号码，切换到【发票作废】界面，检索到发票号码对应的记录，选择【作废】</td>
+  <td colspan=7 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>9</td>
+  <td class=xl71>名称</td>
+  <td class=xl71 colspan=2 style='mso-ignore:colspan'>inv_getinfo</td>
+  <td colspan=15 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=9 style='mso-ignore:colspan'>int inv_getinfo(int <font
+  class="font8">invoice_type</font><font class="font7">,char* </font><font
+  class="font8">invoice_number，char* buff,size_t* bufsize</font><font
+  class="font7">)</font></td>
+  <td colspan=8 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>获取指定发票信息</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>invoice_type</td>
+  <td class=xl67>IN</td>
+  <td class=xl67>int</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>开票类型 0 - 普通发票； 1 - 专用发票</td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>此字段是可选，根据发票编号判别即可</td>
+  <td colspan=5 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>invoice_number</td>
+  <td class=xl67>IN</td>
+  <td class=xl67>string</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>发票代码（系统唯一)</td>
+  <td colspan=10 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>buff</td>
+  <td class=xl67></td>
+  <td class=xl67>OUT</td>
+  <td class=xl67></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>接收缓冲区</td>
+  <td class=xl67>\0为终止</td>
+  <td class=xl70 colspan=4 style='mso-ignore:colspan'>见sheet【发票查询数据交换格式】</td>
+  <td colspan=6 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>bufsize</td>
+  <td class=xl67></td>
+  <td class=xl67>INOUT</td>
+  <td class=xl67>int</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>接收缓冲区大小</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>错误码：</td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 align=right>201</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>发票代码不存在</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 align=right>202</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>接收缓冲区太小</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>bufsize返回需要的缓冲区大小</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>操作说明</td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=10 style='mso-ignore:colspan'>输入发票类型和发票号码，切换到【发票查询】界面，检索到发票号码对应的记录，dump记录到缓冲区</td>
+  <td colspan=7 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=9 style='mso-ignore:colspan'>获取信息包含【发票主信息】和【商品清单】，【商品清单】信息需要开启【清单】界面获取</td>
+  <td colspan=8 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>交换数据格式：</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>发票主体字段之间分隔符</td>
+  <td class=xl67>~+f1+~</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>发票明细记录之间分隔符</td>
+  <td class=xl67>~+f2+~</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=3 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>主题字段与明细分隔符</td>
+  <td class=xl67>~+f3+~</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>发票销售方信息</td>
+  <td colspan=16 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=5 style='mso-ignore:colspan'>银行账号根据订单中的账号进行完全匹配；</td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>复核人、收款人根据订单中的信息设置</td>
+  <td colspan=13 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>其他信息均采用金税软件中设置的参数</td>
+  <td colspan=13 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr class=xl71 height=22 style='height:16.5pt'>
+  <td height=22 class=xl71 align=right style='height:16.5pt'>10</td>
+  <td class=xl71>名称</td>
+  <td class=xl71 colspan=2 style='mso-ignore:colspan'>inv_getinfo_all</td>
+  <td colspan=15 class=xl71 style='mso-ignore:colspan'>　</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>原型</td>
+  <td class=xl67 colspan=5 style='mso-ignore:colspan'>int inv_getinfo_all(<font
+  class="font8">char* buff,size_t* bufsize</font><font class="font7">)</font></td>
+  <td colspan=12 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>功能</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>获取所有发票信息</td>
+  <td colspan=15 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>返回值</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>0 - 成功 ； 其他 - 失败</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>参数</td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>buff</td>
+  <td class=xl67></td>
+  <td class=xl67>OUT</td>
+  <td class=xl67></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>接收缓冲区</td>
+  <td class=xl67>\0为终止</td>
+  <td colspan=10 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67>bufsize</td>
+  <td class=xl67></td>
+  <td class=xl67>INOUT</td>
+  <td class=xl67>int</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>接收缓冲区大小</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>操作说明</td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=9 style='mso-ignore:colspan'>切换到【发票查询界面】，弹出窗口，选择【全年度数据】，导出所有发票数据和商品明细</td>
+  <td colspan=8 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>数据格式见 inv_getinfo()</td>
+  <td colspan=14 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=19 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 class=xl67 style='height:16.5pt'></td>
+  <td class=xl67>错误码：</td>
+  <td colspan=17 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 class=xl67 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 align=right>202</td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>接收缓冲区太小</td>
+  <td class=xl67 colspan=3 style='mso-ignore:colspan'>bufsize返回需要的缓冲区大小</td>
+  <td colspan=11 class=xl67 style='mso-ignore:colspan'></td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

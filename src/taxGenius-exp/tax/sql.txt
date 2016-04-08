@@ -1,0 +1,53 @@
+CREATE TABLE "core_invoice" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "type" smallint NOT NULL,
+    "code" varchar(80) NOT NULL,
+    "number" varchar(80) NOT NULL,
+    "machineno" varchar(80),
+    "itemcount" integer NOT NULL,
+    "cust_name" varchar(320),
+    "cust_taxcode" varchar(50),
+    "cust_address" varchar(320),
+    "cust_bankacct" varchar(320),
+    "encrypt_ver" varchar(30),
+    "encrypt_text" text,
+    "invdate" datetime,
+    "month" integer NOT NULL,
+    "amount" real NOT NULL,
+    "taxrate" real NOT NULL,
+    "taxamount" real NOT NULL,
+    "goodsname" varchar(320),
+    "taxitem" varchar(80),
+    "comment" varchar(240),
+    "invoicer" varchar(30),
+    "checker" varchar(30),
+    "cashier" varchar(30),
+    "flag_dy" smallint NOT NULL,
+    "flag_zf" smallint NOT NULL,
+    "flag_qd" smallint NOT NULL,
+    "flag_xf" smallint NOT NULL,
+    "flag_dj" smallint NOT NULL,
+    "flag_wk" smallint NOT NULL,
+    "seller_name" varchar(240),
+    "seller_taxcode" varchar(240),
+    "seller_address" varchar(240),
+    "seller_bankacct" varchar(240)
+);
+CREATE INDEX "core_invoice_2463b269" ON "core_invoice" ("invdate");
+
+CREATE TABLE "core_invoiceitem" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "invoice_id" integer NOT NULL REFERENCES "core_invoice" ("id"),
+    "name" varchar(80),
+    "taxitem" varchar(30),
+    "spec" varchar(80),
+    "unit" varchar(30),
+    "quantity" real NOT NULL,
+    "price" real NOT NULL,
+    "taxrate" real NOT NULL,
+    "taxamount" real NOT NULL,
+    "tax_flag" integer NOT NULL
+);
+CREATE INDEX "core_invoiceitem_59f72b12" ON "core_invoiceitem" ("invoice_id");
+
+

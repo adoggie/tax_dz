@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>895</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>发票认证输出 v1.4.0.0</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>发票信息</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>70</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLineEdit" name="edtStart">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>46</y>
+             <width>120</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="inputMask">
+            <string>9999-99-99; </string>
+           </property>
+           <property name="text">
+            <string>2012-02-10</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>46</y>
+             <width>31</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>到</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="edtEnd">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>46</y>
+             <width>120</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="inputMask">
+            <string>9999-99-99; </string>
+           </property>
+           <property name="text">
+            <string>2013-06-10</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_5">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>46</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>开票时间</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_4">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>12</y>
+             <width>51</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询类型</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cbxQueryTypes">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>10</y>
+             <width>151</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnQuery">
+           <property name="geometry">
+            <rect>
+             <x>370</x>
+             <y>46</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="edtFilterText">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>10</y>
+             <width>291</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnExport">
+           <property name="geometry">
+            <rect>
+             <x>584</x>
+             <y>46</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="ckSaveToExportDir">
+           <property name="geometry">
+            <rect>
+             <x>680</x>
+             <y>48</y>
+             <width>153</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>自动保存到输出目录</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnUpload">
+           <property name="geometry">
+            <rect>
+             <x>456</x>
+             <y>45</y>
+             <width>117</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>上传到服务器</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_17">
+           <property name="geometry">
+            <rect>
+             <x>632</x>
+             <y>8</y>
+             <width>51</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询类型</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cbxUploadStatus">
+           <property name="geometry">
+            <rect>
+             <x>608</x>
+             <y>8</y>
+             <width>151</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_18">
+           <property name="geometry">
+            <rect>
+             <x>548</x>
+             <y>10</y>
+             <width>51</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>上传状态</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labStatus">
+          <property name="text">
+           <string>  状态</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <widget class="QFrame" name="frame_3">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>发票主体信息</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTreeWidget" name="tvMain">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::ExtendedSelection</enum>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <column>
+               <property name="text">
+                <string notr="true">1</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QFrame" name="frame_2">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>商品项信息</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTreeWidget" name="tvGoods">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <column>
+               <property name="text">
+                <string notr="true">1</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>导入发票</string>
+       </attribute>
+       <widget class="QPushButton" name="btnImportInvoice">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>56</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>导入</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtEndImport">
+        <property name="geometry">
+         <rect>
+          <x>246</x>
+          <y>28</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="inputMask">
+         <string>9999-99-99; </string>
+        </property>
+        <property name="text">
+         <string>2013-06-10</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>28</y>
+          <width>61</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>开票时间</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="edtStartImport">
+        <property name="geometry">
+         <rect>
+          <x>86</x>
+          <y>28</y>
+          <width>120</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="inputMask">
+         <string>9999-99-99; </string>
+        </property>
+        <property name="text">
+         <string>2012-02-10</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>216</x>
+          <y>28</y>
+          <width>31</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>到</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>100</y>
+          <width>409</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>导入发票之前请开启开票软件，并切换到开票主界面</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>132</y>
+          <width>54</width>
+          <height>12</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>提示</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lb_tips">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>152</y>
+          <width>377</width>
+          <height>121</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:rgb(255, 0, 0);
+font: 12pt &quot;微软雅黑&quot;;</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>系统设置</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="geometry">
+         <rect>
+          <x>4</x>
+          <y>12</y>
+          <width>625</width>
+          <height>181</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>企业信息</string>
+        </property>
+        <widget class="QLabel" name="label_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>36</y>
+           <width>54</width>
+           <height>12</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>企业名称</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="edtCorpName">
+         <property name="geometry">
+          <rect>
+           <x>128</x>
+           <y>30</y>
+           <width>361</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="edtTaxcode">
+         <property name="geometry">
+          <rect>
+           <x>128</x>
+           <y>58</y>
+           <width>361</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_7">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>64</y>
+           <width>54</width>
+           <height>12</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>税号</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="edtAddress">
+         <property name="geometry">
+          <rect>
+           <x>128</x>
+           <y>86</y>
+           <width>361</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_8">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>92</y>
+           <width>97</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>企业地址和电话</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="edtBank">
+         <property name="geometry">
+          <rect>
+           <x>128</x>
+           <y>114</y>
+           <width>361</width>
+           <height>20</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>120</y>
+           <width>54</width>
+           <height>12</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>银行账号</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="btnSave">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>148</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>保存</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_16">
+         <property name="geometry">
+          <rect>
+           <x>124</x>
+           <y>148</y>
+           <width>345</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(255, 0, 0);
+
+font: 9pt &quot;微软雅黑&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>以上信息请务必填写正确，否则将导致认证数据失败</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="geometry">
+         <rect>
+          <x>8</x>
+          <y>200</y>
+          <width>621</width>
+          <height>253</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>客户授权信息(您可以发送发票给以下客户)</string>
+        </property>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>296</x>
+           <y>16</y>
+           <width>345</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:rgb(255, 0, 0);
+
+font: 9pt &quot;微软雅黑&quot;;
+</string>
+         </property>
+         <property name="text">
+          <string>请将客户授权文件 *.lic 放置 license目录下</string>
+         </property>
+        </widget>
+        <widget class="QTreeWidget" name="tvClients">
+         <property name="geometry">
+          <rect>
+           <x>12</x>
+           <y>40</y>
+           <width>601</width>
+           <height>201</height>
+          </rect>
+         </property>
+         <column>
+          <property name="text">
+           <string notr="true">1</string>
+          </property>
+         </column>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>说明</string>
+       </attribute>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>16</x>
+          <y>20</y>
+          <width>713</width>
+          <height>429</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ff0000;&quot;&gt;系统简介&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1、通过截屏技术实现增值税发票数据导出，并转换成税务进项发票认证导入数据，实现进项发票认证电子化，实时、高效的完成进行发票认证、汇总统计。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;进项发票认证电子化：&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;2、增值税防伪开票系统直接导出已开发票数据，导入认证系统；通过实现进项发票认证电子化，替代了目前进项发票手工扫描的过程，大大减少了进项发票认证工作量。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ff0000;&quot;&gt;实时、高效：&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;发票开具后可实时导出进项认证数据，并可即时导入购方认证系统；可实时获得进项发票数据，有利于进项发票数据汇总、统计；为购销双方的发票数据传递提供了一个实时、高效、安全的通道&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; color:#ff0000;&quot;&gt;系统流程&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;1、供应商开具增值税发票后，利用《发票导出》软件导出成电子发票数据，并通过购方提供的Email地址发送给购方。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;2、购方利用《发票接收》软件接收电子发票数据，电子发票数据存储在数据库中。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;3、当收到供应商纸质发票后，购方核对发票后直接传送给远程认证软件做远程认证。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;4、购方支付系统可以从电子发票数据库获取电子发票数据，以此作为供应商付款凭证。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;5、可对进项发票数据进行简单查询、统计并打印报表。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="miUserMgr">
+   <property name="text">
+    <string>用户管理</string>
+   </property>
+  </action>
+  <action name="miTask">
+   <property name="text">
+    <string>计划任务</string>
+   </property>
+  </action>
+  <action name="miServerStatus">
+   <property name="text">
+    <string>服务器状态</string>
+   </property>
+  </action>
+  <action name="miChangePwd">
+   <property name="text">
+    <string>更改用户密码</string>
+   </property>
+  </action>
+  <action name="miExit">
+   <property name="text">
+    <string>系统退出</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>4</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>4</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

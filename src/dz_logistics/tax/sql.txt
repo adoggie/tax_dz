@@ -1,0 +1,129 @@
+BEGIN;
+CREATE TABLE "core_document" (
+    "doc_nr" varchar(30) NOT NULL,
+    "inv_type" varchar(30) NOT NULL,
+    "client_nr" varchar(80),
+    "red_nr" varchar(320),
+    "red_code" varchar(30),
+    "red_number" varchar(30),
+    "doc_date" varchar(30),
+    "cust_nr" varchar(30),
+    "cust_name" varchar(320),
+    "cust_tax_code" varchar(50),
+    "cust_address_tel" varchar(320),
+    "cust_bank_account" varchar(320),
+    "inv_taxrate" varchar(30),
+    "taxitem" varchar(80),
+    "memo" varchar(240),
+    "issuer" varchar(30),
+    "checker" varchar(30),
+    "payee" varchar(30),
+    "seller_name" varchar(240),
+    "seller_taxcode" varchar(240),
+    "seller_address" varchar(240),
+    "seller_bankacct" varchar(240),
+    "tax_flag" varchar(30),
+    "discount" varchar(30),
+    "status" integer NOT NULL,
+    "doc_time" varchar(30),
+    "pay_type" varchar(30),
+    "settlement_time" varchar(30)
+)
+;
+CREATE TABLE "core_documentitem" (
+    "doc_nr" varchar(30) NOT NULL,
+    "item_nr" varchar(30) NOT NULL,
+    "item_name" varchar(80),
+    "taxitem" varchar(30),
+    "spec" varchar(80),
+    "unit" varchar(30),
+    "qty" varchar(30),
+    "price" varchar(30),
+    "amount" varchar(30),
+    "taxrate" varchar(30),
+    "tax" varchar(30),
+    "flag_tax" varchar(30),
+    "discount_amount" varchar(30),
+    "discount_tax" varchar(30)
+)
+;
+CREATE TABLE "core_invoice" (
+    "doc_nr" varchar(30) NOT NULL,
+    "inv_type" varchar(30) NOT NULL,
+    "inv_code" varchar(80) NOT NULL,
+    "inv_number" varchar(80) NOT NULL,
+    "client_nr" varchar(80),
+    "cust_nr" varchar(30),
+    "cust_name" varchar(320),
+    "cust_tax_code" varchar(50),
+    "cust_address_tel" varchar(320),
+    "cust_bank_account" varchar(320),
+    "inv_date" varchar(30),
+    "inv_month" varchar(30),
+    "inv_amount" varchar(30),
+    "inv_taxrate" varchar(30),
+    "inv_tax" varchar(30),
+    "taxitem" varchar(80),
+    "memo" varchar(240),
+    "issuer" varchar(30),
+    "checker" varchar(30),
+    "payee" varchar(30),
+    "flag_dy" integer,
+    "flag_zf" integer,
+    "flag_qd" integer,
+    "flag_xf" integer,
+    "flag_dj" integer,
+    "flag_wk" integer,
+    "seller_name" varchar(240),
+    "seller_taxcode" varchar(240),
+    "seller_address" varchar(240),
+    "seller_bankacct" varchar(240),
+    "isuploaded" integer NOT NULL,
+    "doc_time" varchar(30),
+    "pay_type" varchar(30),
+    "settlement_time" varchar(30)
+)
+;
+CREATE TABLE "core_invoiceitem" (
+    "inv_code" varchar(80) NOT NULL,
+    "inv_number" varchar(80) NOT NULL,
+    "item_nr" varchar(30) NOT NULL,
+    "item_name" varchar(80),
+    "taxitem" varchar(30),
+    "spec" varchar(80),
+    "unit" varchar(30),
+    "qty" varchar(30),
+    "price" varchar(30),
+    "amount" varchar(30),
+    "taxrate" varchar(30),
+    "tax" varchar(30),
+    "flag_tax" varchar(30),
+    "discount_amount" varchar(30),
+    "discount_tax" varchar(30)
+)
+;
+CREATE INDEX "core_document_6d542704" ON "core_document" ("doc_nr");
+CREATE INDEX "core_document_17f1e1f1" ON "core_document" ("inv_type");
+CREATE INDEX "core_document_3d7dd0e5" ON "core_document" ("red_nr");
+CREATE INDEX "core_document_e56c8a8" ON "core_document" ("red_code");
+CREATE INDEX "core_document_50fe3122" ON "core_document" ("red_number");
+CREATE INDEX "core_document_706c493e" ON "core_document" ("doc_date");
+CREATE INDEX "core_document_2bcaac64" ON "core_document" ("cust_nr");
+CREATE INDEX "core_document_57690cc9" ON "core_document" ("cust_name");
+CREATE INDEX "core_document_1d80e17d" ON "core_document" ("cust_tax_code");
+CREATE INDEX "core_document_25316c09" ON "core_document" ("cust_address_tel");
+CREATE INDEX "core_document_6042f540" ON "core_document" ("cust_bank_account");
+CREATE INDEX "core_documentitem_6d542704" ON "core_documentitem" ("doc_nr");
+CREATE INDEX "core_documentitem_284e5b30" ON "core_documentitem" ("item_nr");
+CREATE INDEX "core_invoice_6d542704" ON "core_invoice" ("doc_nr");
+CREATE INDEX "core_invoice_2bcaac64" ON "core_invoice" ("cust_nr");
+CREATE INDEX "core_invoice_51b7d6a8" ON "core_invoice" ("flag_dy");
+CREATE INDEX "core_invoice_a9e7295" ON "core_invoice" ("flag_zf");
+CREATE INDEX "core_invoice_3478bb76" ON "core_invoice" ("flag_qd");
+CREATE INDEX "core_invoice_7ab9fe89" ON "core_invoice" ("flag_xf");
+CREATE INDEX "core_invoice_52d9c1a1" ON "core_invoice" ("flag_dj");
+CREATE INDEX "core_invoice_e779fd7" ON "core_invoice" ("flag_wk");
+CREATE INDEX "core_invoiceitem_569e60b4" ON "core_invoiceitem" ("inv_code");
+CREATE INDEX "core_invoiceitem_2ac2c3ce" ON "core_invoiceitem" ("inv_number");
+CREATE INDEX "core_invoiceitem_284e5b30" ON "core_invoiceitem" ("item_nr");
+COMMIT;

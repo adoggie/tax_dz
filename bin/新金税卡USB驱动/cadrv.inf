@@ -1,0 +1,100 @@
+;; cacti98drv.inf
+
+;; *********  PLEASE READ ***********
+;; The wizard cannot create exact INF files for all buses and device types.
+;; You may have to make changes to this file in order to get your device to
+;; install. In particular, hardware IDs and logical configurations require
+;; intervention.
+;;
+;; The Windows DDK documentation contains an excellent INF reference.
+
+;--------- Version Section ---------------------------------------------------
+
+[Version]
+Signature="$Windows 95$"
+Provider=%ProviderName%
+; If device fits one of the standard classes, use the name and GUID here,
+; otherwise create your own device class and GUID as this example shows.
+Class=USB
+ClassGUID={ff646f81-8def-1123-9449-00105a075f6b}
+DriverVer=09/28/2005
+
+
+;--------- ClassInstall/ClassInstall32 Section -------------------------------
+
+; Not necessary if using a standard class
+
+; 9X Style
+[ClassInstall]
+Addreg=Class_AddReg
+
+; NT Style
+[ClassInstall32]
+Addreg=Class_AddReg
+
+[Class_AddReg]
+HKR,,,,%DeviceClassName%
+HKR,,Icon,,"-5"
+
+;--------- DestinationDirs Section -------------------------------------------
+
+[DestinationDirs]
+DefaultDestDir   = 12
+
+;--------- Manufacturer and Models Sections ----------------------------------
+
+[Manufacturer]
+%MfgName%=Mfg0
+
+[Mfg0]
+%DeviceDesc%=cadrv_DDI, USB\VID_1111&PID_2322
+
+;---------- DDInstall Sections -----------------------------------------------
+; --------- Windows 9X -----------------
+
+; Experimentation has shown that DDInstall root names greater than 19 characters
+; cause problems in Windows 98
+
+[cadrv_DDI]
+CopyFiles=cadrv_Files_Driver
+AddReg=cadrv_9X_AddReg
+
+[cadrv_9X_AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,cadrv.sys
+HKR, "Parameters", "BreakOnEntry", 0x00010001, 0
+
+; --------- Windows NT -----------------
+
+[cadrv_DDI.NT]
+CopyFiles=cadrv_Files_Driver
+AddReg=cadrv_NT_AddReg
+
+[cadrv_DDI.NT.Services]
+Addservice = cadrv, 0x00000002, cadrv_AddService
+
+[cadrv_AddService]
+DisplayName    = %SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\cadrv.sys
+
+[cadrv_NT_AddReg]
+HKLM, "System\CurrentControlSet\Services\cadrv\Parameters",\
+	"BreakOnEntry", 0x00010001, 0
+
+
+; --------- Files (common) -------------
+
+[cadrv_Files_Driver]
+cadrv.sys
+
+;--------- Strings Section ---------------------------------------------------
+
+[Strings]
+ProviderName="防伪税控"
+MfgName="航天信息股份有限公司"
+DeviceDesc="金税卡"
+DeviceClassName="金税卡"
+SvcDesc="金税卡"

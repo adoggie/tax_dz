@@ -1,0 +1,879 @@
+inherited SpecInvFaceForm: TSpecInvFaceForm
+  Left = 249
+  Top = 155
+  Caption = 电脑版专用发票、凭证
+  ClientHeight = 557
+  ClientWidth = 777
+  Constraints.MinWidth = 0
+  PixelsPerInch = 96
+  TextHeight = 12
+  inherited TitleLabel: TLabel
+    Width = 777
+  end
+  inherited Label13: TLabel
+    Left = 396
+    Top = 85
+  end
+  inherited InvoiceNoText: TDBText
+    Left = 652
+    Top = 83
+  end
+  inherited Label14: TLabel
+    Left = 620
+    Top = 87
+  end
+  inherited Label10: TLabel
+    Left = 590
+    Top = 517
+  end
+  inherited Label12: TLabel
+    Top = 493
+  end
+  inherited Shape21: TShape
+    Left = 116
+    Top = 385
+    Height = 21
+  end
+  inherited Shape19: TShape
+    Left = 540
+    Top = 405
+    Width = 233
+    Height = 105
+  end
+  inherited Shape23: TShape
+    Left = 4
+    Top = 385
+    Height = 21
+  end
+  inherited Label17: TLabel
+    Left = 12
+    Top = 389
+    Width = 96
+    Caption = 价税合计（大写）
+  end
+  inherited Operator: TDBText
+    Left = 627
+    Top = 517
+  end
+  inherited GatheringerText: TDBText
+    Left = 336
+    Top = 517
+  end
+  inherited Label8: TLabel
+    Left = 22
+    Top = 86
+    Width = 84
+    Caption = 发票类别代码：
+  end
+  inherited InvoiceTypeCode: TDBText
+    Left = 116
+    Top = 83
+  end
+  inherited DateText: TDBText
+    Left = 460
+    Top = 85
+  end
+  object Shape24: TShape [15]
+    Left = 4
+    Top = 365
+    Width = 113
+    Height = 21
+    Brush.Color = clBtnFace
+  end
+  object Label1: TLabel [16]
+    Left = 16
+    Top = 369
+    Width = 72
+    Height = 12
+    Caption = 合        计
+  end
+  object Shape20: TShape [17]
+    Left = 116
+    Top = 365
+    Width = 657
+    Height = 21
+    Brush.Color = clBtnFace
+  end
+  object Label18: TLabel [18]
+    Left = 420
+    Top = 369
+    Width = 36
+    Height = 12
+    Caption = 金额：
+  end
+  object Label19: TLabel [19]
+    Left = 596
+    Top = 369
+    Width = 36
+    Height = 12
+    Caption = 税额：
+  end
+  object ToTalEdit: TDBText [20]
+    Left = 460
+    Top = 369
+    Width = 125
+    Height = 12
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    DataField = 合计金额
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentFont = False
+  end
+  object TaxTotalEdit: TDBText [21]
+    Left = 632
+    Top = 369
+    Width = 117
+    Height = 12
+    Alignment = taRightJustify
+    BiDiMode = bdLeftToRight
+    DataField = 合计税额
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentBiDiMode = False
+    ParentFont = False
+  end
+  object Shape2: TShape [22]
+    Left = 4
+    Top = 105
+    Width = 25
+    Height = 105
+    Brush.Color = clBtnFace
+  end
+  object Shape4: TShape [23]
+    Left = 520
+    Top = 105
+    Width = 25
+    Height = 105
+    Brush.Color = clBtnFace
+  end
+  object Label16: TLabel [24]
+    Left = 10
+    Top = 113
+    Width = 13
+    Height = 89
+    AutoSize = False
+    Caption = 购  货  单  位
+    WordWrap = True
+  end
+  object Shape5: TShape [25]
+    Left = 540
+    Top = 105
+    Width = 233
+    Height = 105
+    Brush.Color = clBtnFace
+  end
+  object Label20: TLabel [26]
+    Left = 526
+    Top = 113
+    Width = 13
+    Height = 81
+    AutoSize = False
+    Caption =  密  码  区
+    WordWrap = True
+  end
+  object InvCipher: TDBText [27]
+    Left = 548
+    Top = 113
+    Width = 54
+    Height = 12
+    AutoSize = True
+    DataField = 密文
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  object CipherVersion: TDBText [28]
+    Left = 749
+    Top = 113
+    Width = 22
+    Height = 12
+    DataField = 加密版本号
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  object InvNo: TDBText [29]
+    Left = 688
+    Top = 185
+    Width = 65
+    Height = 17
+    DataField = 发票号码
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  object InvTypeCodeDBTxt: TDBText [30]
+    Left = 688
+    Top = 149
+    Width = 65
+    Height = 17
+    DataField = 类别代码
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  object CipherVersionLabel: TLabel [31]
+    Left = 688
+    Top = 113
+    Width = 60
+    Height = 12
+    Caption = 加密版本：
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  inherited Label21: TLabel
+    Left = 512
+    Top = 389
+  end
+  object Label3: TLabel [33]
+    Left = 301
+    Top = 517
+    Width = 36
+    Height = 12
+    Caption = 收款：
+  end
+  object Shape6: TShape [34]
+    Left = 28
+    Top = 405
+    Width = 489
+    Height = 106
+    Brush.Color = clBtnFace
+  end
+  object Shape7: TShape [35]
+    Left = 516
+    Top = 405
+    Width = 25
+    Height = 106
+    Brush.Color = clBtnFace
+    Pen.Mode = pmMask
+  end
+  object Label5: TLabel [36]
+    Left = 36
+    Top = 414
+    Width = 84
+    Height = 12
+    Caption = 名        称：
+  end
+  object Label6: TLabel [37]
+    Left = 36
+    Top = 462
+    Width = 84
+    Height = 12
+    Caption = 地 址、电 话：
+  end
+  object Label7: TLabel [38]
+    Left = 36
+    Top = 438
+    Width = 84
+    Height = 12
+    Caption = 纳税人识别号：
+    WordWrap = True
+  end
+  object Label9: TLabel [39]
+    Left = 36
+    Top = 486
+    Width = 84
+    Height = 12
+    Caption = 开户行及账号：
+  end
+  object Label22: TLabel [40]
+    Left = 522
+    Top = 414
+    Width = 13
+    Height = 81
+    AutoSize = False
+    Caption =  备        注
+    WordWrap = True
+  end
+  object AddressTelephone: TDBText [41]
+    Left = 124
+    Top = 462
+    Width = 385
+    Height = 12
+    DataField = 销方地址电话
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object SellAccText: TDBText [42]
+    Left = 124
+    Top = 483
+    Width = 385
+    Height = 18
+    DataField = 销方银行帐号
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  inherited DueText: TDBText
+    Left = 564
+    Top = 389
+    Width = 185
+  end
+  object Label26: TLabel [44]
+    Left = 450
+    Top = 517
+    Width = 36
+    Height = 12
+    Caption = 复核：
+  end
+  object CheckerText: TDBText [45]
+    Left = 500
+    Top = 517
+    Width = 66
+    Height = 12
+    AutoSize = True
+    DataField = 复核人
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  inherited CAmount: TDBText
+    Left = 128
+    Top = 389
+  end
+  inherited Shape8: TShape
+    Left = 28
+    Top = 105
+    Width = 493
+    Height = 105
+    Pen.Color = clBlack
+  end
+  inherited CustnameText: TDBText
+    Left = 128
+    Top = 113
+    Width = 385
+    Height = 12
+  end
+  object Labe23: TLabel [49]
+    Left = 36
+    Top = 113
+    Width = 84
+    Height = 12
+    Caption = 名        称：
+  end
+  object Label15: TLabel [50]
+    Left = 36
+    Top = 137
+    Width = 84
+    Height = 12
+    Caption = 纳税人识别号：
+  end
+  object Label24: TLabel [51]
+    Left = 36
+    Top = 161
+    Width = 84
+    Height = 12
+    Caption = 地 址、电 话：
+  end
+  object Label2: TLabel [52]
+    Left = 36
+    Top = 185
+    Width = 84
+    Height = 12
+    Caption = 开户行及账号：
+  end
+  object CustTaxCode: TDBText [53]
+    Left = 128
+    Top = 137
+    Width = 385
+    Height = 12
+    DataField = 购方税号
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  object CustTelText: TDBText [54]
+    Left = 128
+    Top = 161
+    Width = 385
+    Height = 12
+    DataField = 购方地址电话
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  object CustAccText: TDBText [55]
+    Left = 128
+    Top = 185
+    Width = 385
+    Height = 12
+    DataField = 购方银行帐号
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+  end
+  object Shape1: TShape [56]
+    Left = 4
+    Top = 405
+    Width = 25
+    Height = 106
+    Brush.Color = clBtnFace
+  end
+  object Label11: TLabel [57]
+    Left = 10
+    Top = 413
+    Width = 13
+    Height = 89
+    AutoSize = False
+    Caption = 销  货  单  位
+    WordWrap = True
+  end
+  object Corporation: TDBText [58]
+    Left = 124
+    Top = 414
+    Width = 385
+    Height = 12
+    DataField = 销方名称
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object TaxCode: TDBText [59]
+    Left = 124
+    Top = 438
+    Width = 385
+    Height = 12
+    DataField = 销方税号
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ParentFont = False
+    Transparent = True
+  end
+  object InvVerifyTxt: TDBText [60]
+    Left = 20
+    Top = 64
+    Width = 90
+    Height = 19
+    AutoSize = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -14
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Image1: TImage [61]
+    Left = 544
+    Top = 128
+    Width = 225
+    Height = 57
+    Picture.Data = {......}
+    Stretch = True
+  end
+  inherited StatusBar: TStatusBar
+    Top = 534
+    Width = 777
+  end
+  inherited DBGridE: TDBGridE
+    Left = 4
+    Top = 213
+    Width = 769
+    Height = 149
+    Columns = <
+      item
+        ButtonStyle = cbsEllipsis
+        Expanded = False
+        FieldName = 商品名称
+        Width = 129
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 规格型号
+        Width = 83
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 计量单位
+        Width = 53
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 数量
+        Width = 101
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 单价
+        Width = 103
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 金额
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 税率
+        ReadOnly = True
+        Width = 26
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 税额
+        ReadOnly = True
+        Width = 115
+        Visible = True
+      end>
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgCancelOnExit]
+    TabOrder = 6
+    Caption = 专用发票填开
+    Columns = <
+      item
+        ButtonStyle = cbsEllipsis
+        Expanded = False
+        FieldName = 商品名称
+        Width = 129
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 规格型号
+        Width = 83
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 计量单位
+        Width = 53
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 数量
+        Width = 101
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 单价
+        Width = 103
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 金额
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 税率
+        ReadOnly = True
+        Width = 26
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 税额
+        ReadOnly = True
+        Width = 115
+        Visible = True
+      end>
+  end
+  inherited ControlBar1: TControlBar
+    Width = 777
+    TabOrder = 11
+    inherited nevigatorBar: TToolBar
+      Left = 593
+      Width = 167
+      inherited DBNavigatorE: TDBNavigatorE
+        MaintMode = [miModify, miInsert, miDelete]
+      end
+    end
+    inherited MyBtn: TToolBar
+      Width = 264
+      inherited AddClientBtn: TToolButton
+        Visible = True
+        OnClick = AddClientBtnClick
+      end
+      object ImpDjBtn: TToolButton
+        Left = 233
+        Top = 0
+        Caption = 单据
+        ImageIndex = 19
+        Visible = False
+        OnClick = ImpDjBtnClick
+      end
+    end
+    object PlusColBtn: TToolBar
+      Left = 773
+      Top = 2
+      Width = 35
+      Height = 35
+      Align = alLeft
+      AutoSize = True
+      ButtonHeight = 35
+      ButtonWidth = 31
+      Caption = 'PlusColBtn'
+      DisabledImages = DisableImages
+      EdgeBorders = []
+      EdgeInner = esNone
+      EdgeOuter = esNone
+      Flat = True
+      HotImages = HotImages
+      Images = Images
+      ShowCaptions = True
+      TabOrder = 4
+      Transparent = True
+      object PlusBtn: TToolButton
+        Left = 0
+        Top = 0
+        Hint = 附加项目录入、打印定义
+        AutoSize = True
+        Caption = 附加
+        DropdownMenu = PlusColMenu
+        ImageIndex = 20
+        Wrap = True
+      end
+    end
+  end
+  inherited DatePick: TDateTimePicker
+    Left = 454
+    Top = 81
+    TabOrder = 5
+  end
+  inherited CustnameCombo: TDBComboBox
+    Left = 124
+    Top = 109
+    Width = 389
+  end
+  inherited GatheringerCombo: TDBComboBox
+    Left = 336
+    Top = 513
+    TabOrder = 9
+  end
+  object CustAccCombo: TDBComboBoxE [68]
+    Left = 124
+    Top = 181
+    Width = 389
+    Height = 20
+    DataField = 购方银行帐号
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ImeName = 输入法名称
+    ItemHeight = 12
+    ParentFont = False
+    TabOrder = 4
+    MaxLength = 100
+  end
+  object CustTelCombo: TDBComboBoxE [69]
+    Left = 124
+    Top = 157
+    Width = 389
+    Height = 20
+    DataField = 购方地址电话
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ImeName = 输入法名称
+    ItemHeight = 12
+    ParentFont = False
+    TabOrder = 3
+    MaxLength = 100
+  end
+  object CustTaxCodeCombo: TDBComboBoxE [70]
+    Left = 124
+    Top = 133
+    Width = 389
+    Height = 20
+    DataField = 购方税号
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ImeName = 输入法名称
+    ItemHeight = 12
+    ParentFont = False
+    TabOrder = 2
+    OnDropDown = CustnameComboDropDown
+    OnExit = CustnameComboExit
+    OnKeyPress = CustnameComboKeyPress
+    MaxLength = 15
+  end
+  object SellAccCombo: TDBComboBox [71]
+    Left = 124
+    Top = 482
+    Width = 377
+    Height = 20
+    Style = csDropDownList
+    Ctl3D = True
+    DataField = 销方银行帐号
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ImeName = 输入法名称
+    ItemHeight = 12
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 7
+    OnChange = SellAccComboChange
+  end
+  object CheckerCombo: TDBComboBox [72]
+    Left = 488
+    Top = 513
+    Width = 93
+    Height = 20
+    DataField = 复核人
+    DropDownCount = 5
+    Font.Charset = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 宋体
+    Font.Style = []
+    ImeName = 输入法名称
+    ItemHeight = 12
+    ParentFont = False
+    TabOrder = 10
+  end
+  inherited MemoText: TDBMemo
+    Left = 544
+    Top = 409
+    Width = 225
+    Height = 97
+    TabStop = False
+    BevelInner = bvNone
+    BevelOuter = bvNone
+    TabOrder = 12
+    WantTabs = False
+  end
+  inherited MemoEdit: TDBMemo
+    Left = 544
+    Top = 409
+    Width = 225
+    Height = 97
+    MaxLength = 230
+    TabOrder = 8
+  end
+  object IDCheck: TCheckBox [75]
+    Left = 288
+    Top = 80
+    Width = 57
+    Height = 17
+    Caption = 身份证
+    TabOrder = 13
+    Visible = False
+    OnClick = IDCheckClick
+  end
+  inherited Images: TImageList
+    Top = 37
+    Bitmap = {......}
+  end
+  inherited HotImages: TImageList
+    Top = 37
+    Bitmap = {......}
+  end
+  inherited DisableImages: TImageList
+    Left = 337
+    Top = 37
+    Bitmap = {......}
+  end
+  inherited CtrlBarMenu: TPopupMenu
+    Left = 230
+    Top = 39
+  end
+  inherited MxSource: TDataSource
+    Left = 200
+    Top = 39
+  end
+  inherited SelPosiInvMenu: TPopupMenu
+    Top = 113
+    inherited PosiInvMenuT1: TMenuItem
+      ImageIndex = 22
+    end
+    inherited RedInvMenuT3: TMenuItem
+      Caption = 导入红字发票通知单
+      ImageIndex = 22
+    end
+  end
+  object PlusColMenu: TPopupMenu
+    AutoHotkeys = maManual
+    Images = Images
+    Left = 424
+    Top = 121
+    object N1: TMenuItem
+      AutoCheck = True
+      Caption = 发票附加信息
+      ImageIndex = 24
+      RadioItem = True
+      OnClick = N1Click
+    end
+    object N2: TMenuItem
+      AutoCheck = True
+      Caption = 附加项目打印定义
+      ImageIndex = 23
+      RadioItem = True
+      OnClick = N2Click
+    end
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 128
+    Top = 272
+  end
+end

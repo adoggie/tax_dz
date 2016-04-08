@@ -1,0 +1,7 @@
+db.sid=ORCL
+db.host=192.168.14.203
+db.user=tax
+db.passwd=tax
+db.port=1521
+oracle.home=D:\Projects\newtax\bin\instantclient_10_2
+productcode_ignored=

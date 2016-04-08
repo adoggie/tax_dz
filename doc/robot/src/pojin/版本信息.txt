@@ -1,0 +1,5 @@
+xp -- 
+	HKEY_LOCAL_MACHINE\SOFTWARE\航天信息\防伪开票\版本号
+
+win7 - 32 
+	HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\航天信息\防伪开票\版本号

@@ -1,0 +1,72 @@
+BEGIN;
+CREATE TABLE "core_invoice" (
+    "doc_nr" varchar(30) NOT NULL,
+    "inv_type" smallint NOT NULL,
+    "inv_code" varchar(80) NOT NULL,
+    "inv_number" varchar(80) NOT NULL,
+    "client_nr" varchar(80),
+    "cust_nr" varchar(30),
+    "cust_name" varchar(320),
+    "cust_tax_code" varchar(50),
+    "cust_address_tel" varchar(320),
+    "cust_bank_account" varchar(320),
+    "inv_date" timestamp with time zone,
+    "inv_month" varchar(30),
+    "inv_amount" double precision NOT NULL,
+    "inv_taxrate" double precision NOT NULL,
+    "inv_tax" double precision NOT NULL,
+    "memo" varchar(240),
+    "issuer" varchar(30),
+    "checker" varchar(30),
+    "payee" varchar(30),
+    "flag_dy" integer,
+    "flag_zf" integer,
+    "flag_qd" integer,
+    "flag_xf" integer,
+    "flag_dj" integer,
+    "flag_wk" integer,
+    "seller_name" varchar(240),
+    "seller_taxcode" varchar(240),
+    "seller_address" varchar(240),
+    "seller_bankacct" varchar(240),
+    "uploadtime" timestamp with time zone NOT NULL,
+    "doc_time" timestamp with time zone NOT NULL,
+    "pay_type" integer NOT NULL,
+    "settlement_time" timestamp with time zone
+)
+;
+CREATE TABLE "core_invoiceitem" (
+    "item_nr" varchar(30) NOT NULL,
+    "item_name" varchar(80),
+    "taxitem" varchar(30),
+    "spec" varchar(80),
+    "unit" varchar(30),
+    "qty" double precision NOT NULL,
+    "price" double precision NOT NULL,
+    "amount" double precision NOT NULL,
+    "taxrate" double precision NOT NULL,
+    "tax" double precision NOT NULL,
+    "flag_tax" integer,
+    "discount_amount" double precision NOT NULL,
+    "discount_tax" double precision NOT NULL
+)
+;
+CREATE INDEX "core_invoice_doc_nr" ON "core_invoice" ("doc_nr");
+CREATE INDEX "core_invoice_doc_nr_like" ON "core_invoice" ("doc_nr" varchar_pattern_ops);
+CREATE INDEX "core_invoice_cust_nr" ON "core_invoice" ("cust_nr");
+CREATE INDEX "core_invoice_cust_nr_like" ON "core_invoice" ("cust_nr" varchar_pattern_ops);
+CREATE INDEX "core_invoice_issuer" ON "core_invoice" ("issuer");
+CREATE INDEX "core_invoice_issuer_like" ON "core_invoice" ("issuer" varchar_pattern_ops);
+CREATE INDEX "core_invoice_flag_dy" ON "core_invoice" ("flag_dy");
+CREATE INDEX "core_invoice_flag_zf" ON "core_invoice" ("flag_zf");
+CREATE INDEX "core_invoice_flag_qd" ON "core_invoice" ("flag_qd");
+CREATE INDEX "core_invoice_flag_xf" ON "core_invoice" ("flag_xf");
+CREATE INDEX "core_invoice_flag_dj" ON "core_invoice" ("flag_dj");
+CREATE INDEX "core_invoice_flag_wk" ON "core_invoice" ("flag_wk");
+CREATE INDEX "core_invoice_uploadtime" ON "core_invoice" ("uploadtime");
+CREATE INDEX "core_invoice_doc_time" ON "core_invoice" ("doc_time");
+CREATE INDEX "core_invoice_settlement_time" ON "core_invoice" ("settlement_time");
+CREATE INDEX "core_invoiceitem_invoice_id" ON "core_invoiceitem" ("invoice_id");
+CREATE INDEX "core_invoiceitem_item_nr" ON "core_invoiceitem" ("item_nr");
+CREATE INDEX "core_invoiceitem_item_nr_like" ON "core_invoiceitem" ("item_nr" varchar_pattern_ops);
+COMMIT;

@@ -1,0 +1,32 @@
+1,所有导出函数的调用方式为 stdcall
+
+
+2,所有导出函数都有返回值,类型为Int32.
+
+
+3,增加接口
+  初始化插件:   int InitPluger(); 
+  释放插件:     int FreePluger();
+
+  在所有功能使用前调用 InitPluger()，
+  只有InitPluger()返回成功之后，才能使用其它功能。
+
+
+
+
+4,inv_cancel() 与 inv_getinfo() 参数修改.
+
+    int inv_cancel(int invoice_type,char* invoice_number,char* invoice_code);
+    int inv_getinfo(int invoice_type,char* invoice_number,char* invoice_code,char* buff,size_t* bufsize)
+
+  增加了参数 invoice_code 发票代码
+  因为 发票号码 或 发票代码 都会重复，只有两者同时匹配才唯一
+
+  注意: 
+        invoice_number 发票号码
+        在开票软件界面中显示的值是 8 个字符,如 00045205
+        在 inv_cancel() 与 inv_getinfo() 传入参数时,应去除前面的字符0
+        如有一发票的号码为 00045205,在inv_cancel()时应传用 45205 ，才能作废成功.
+        如果传入的是 00045205,则作废失败,返回 [发票代码不存在]
+
+

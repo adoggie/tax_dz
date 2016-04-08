@@ -1,0 +1,1 @@
+﻿ERROR_OK = 0ERROR_UNAUTHERIZED = 101 #用户身份未认证

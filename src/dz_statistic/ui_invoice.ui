@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1049</width>
+    <height>557</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>大众开票统计</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>发票日报表-收银员</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btnQuery_1">
+           <property name="geometry">
+            <rect>
+             <x>664</x>
+             <y>12</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnExport_1">
+           <property name="geometry">
+            <rect>
+             <x>748</x>
+             <y>12</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_6">
+           <property name="geometry">
+            <rect>
+             <x>444</x>
+             <y>12</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>收银员</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cbxEmployee_1">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>12</y>
+             <width>153</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtStart_1">
+           <property name="geometry">
+            <rect>
+             <x>112</x>
+             <y>12</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="currentSection">
+            <enum>QDateTimeEdit::YearSection</enum>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtEnd_1">
+           <property name="geometry">
+            <rect>
+             <x>280</x>
+             <y>12</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>16</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>至</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cbxTimeQueryType1">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>12</y>
+             <width>105</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_3">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="margin">
+            <number>2</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="txtTotal_1">
+             <property name="text">
+              <string>合计:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QTreeWidget" name="tvList_1">
+             <property name="font">
+              <font>
+               <family>Arial</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::ExtendedSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <column>
+              <property name="text">
+               <string notr="true">1</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>发票日报表-机器</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QFrame" name="frame_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QComboBox" name="cbxMechine_2">
+           <property name="geometry">
+            <rect>
+             <x>500</x>
+             <y>8</y>
+             <width>153</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnExport_2">
+           <property name="geometry">
+            <rect>
+             <x>748</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_10">
+           <property name="geometry">
+            <rect>
+             <x>444</x>
+             <y>8</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>机器号</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnQuery_2">
+           <property name="geometry">
+            <rect>
+             <x>664</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtStart_2">
+           <property name="geometry">
+            <rect>
+             <x>114</x>
+             <y>8</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>262</x>
+             <y>12</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>至</string>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtEnd_2">
+           <property name="geometry">
+            <rect>
+             <x>282</x>
+             <y>8</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cbxTimeQueryType2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>8</y>
+             <width>105</width>
+             <height>22</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="txtTotal_2">
+          <property name="text">
+           <string>合计:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTreeWidget" name="tvList_2">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>汇总报表-机器结算日</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QFrame" name="frame_4">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btnExport_3">
+           <property name="geometry">
+            <rect>
+             <x>492</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_13">
+           <property name="geometry">
+            <rect>
+             <x>6</x>
+             <y>12</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>结算日期</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnQuery_3">
+           <property name="geometry">
+            <rect>
+             <x>408</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtStart_3">
+           <property name="geometry">
+            <rect>
+             <x>68</x>
+             <y>8</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_12">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>12</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>至</string>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtEnd_3">
+           <property name="geometry">
+            <rect>
+             <x>236</x>
+             <y>8</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="txtTotal_3">
+          <property name="text">
+           <string>合计:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTreeWidget" name="tvList_3">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>汇总报表-机器开票日</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QFrame" name="frame_5">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_14">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>13</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>开票日期</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnQuery_4">
+           <property name="geometry">
+            <rect>
+             <x>348</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnExport_4">
+           <property name="geometry">
+            <rect>
+             <x>432</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+          <widget class="QDateEdit" name="dtStart_4">
+           <property name="geometry">
+            <rect>
+             <x>81</x>
+             <y>9</y>
+             <width>113</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QDateEdit" name="dtEnd_4">
+           <property name="geometry">
+            <rect>
+             <x>228</x>
+             <y>8</y>
+             <width>113</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_15">
+           <property name="geometry">
+            <rect>
+             <x>208</x>
+             <y>12</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>至</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="txtTotal_4">
+          <property name="text">
+           <string>合计:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTreeWidget" name="tvList_4">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>作废汇总表</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QFrame" name="frame_6">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_16">
+           <property name="geometry">
+            <rect>
+             <x>9</x>
+             <y>16</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>开票日期</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnQuery_5">
+           <property name="geometry">
+            <rect>
+             <x>347</x>
+             <y>11</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnExport_5">
+           <property name="geometry">
+            <rect>
+             <x>431</x>
+             <y>11</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+          <widget class="QDateEdit" name="dtEnd_5">
+           <property name="geometry">
+            <rect>
+             <x>227</x>
+             <y>11</y>
+             <width>113</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_17">
+           <property name="geometry">
+            <rect>
+             <x>207</x>
+             <y>15</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>至</string>
+           </property>
+          </widget>
+          <widget class="QDateEdit" name="dtStart_5">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>12</y>
+             <width>113</width>
+             <height>25</height>
+            </rect>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="txtTotal_5">
+          <property name="text">
+           <string>合计:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTreeWidget" name="tvList_5">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="widget">
+       <attribute name="title">
+        <string>收银员收银日报表</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QFrame" name="frame_7">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btnExport_6">
+           <property name="geometry">
+            <rect>
+             <x>924</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_18">
+           <property name="geometry">
+            <rect>
+             <x>6</x>
+             <y>12</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>结算日期</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnQuery_6">
+           <property name="geometry">
+            <rect>
+             <x>840</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtStart_6">
+           <property name="geometry">
+            <rect>
+             <x>68</x>
+             <y>8</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_19">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>12</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>至</string>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtEnd_6">
+           <property name="geometry">
+            <rect>
+             <x>236</x>
+             <y>8</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cbxEmployee_6">
+           <property name="geometry">
+            <rect>
+             <x>672</x>
+             <y>8</y>
+             <width>153</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_7">
+           <property name="geometry">
+            <rect>
+             <x>616</x>
+             <y>8</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>收银员</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="cbxMechine_6">
+           <property name="geometry">
+            <rect>
+             <x>448</x>
+             <y>8</y>
+             <width>153</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="editable">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_22">
+           <property name="geometry">
+            <rect>
+             <x>392</x>
+             <y>8</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>机器号</string>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="txtTotal_6">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTreeWidget" name="tvList_6">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>收银员收银汇总日报表</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QFrame" name="frame_8">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QPushButton" name="btnExport_7">
+           <property name="geometry">
+            <rect>
+             <x>492</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>导出</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_20">
+           <property name="geometry">
+            <rect>
+             <x>6</x>
+             <y>12</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>结算日期</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btnQuery_7">
+           <property name="geometry">
+            <rect>
+             <x>408</x>
+             <y>8</y>
+             <width>75</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtStart_7">
+           <property name="geometry">
+            <rect>
+             <x>68</x>
+             <y>8</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_21">
+           <property name="geometry">
+            <rect>
+             <x>216</x>
+             <y>12</y>
+             <width>29</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>至</string>
+           </property>
+          </widget>
+          <widget class="QDateTimeEdit" name="dtEnd_7">
+           <property name="geometry">
+            <rect>
+             <x>236</x>
+             <y>8</y>
+             <width>140</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <property name="displayFormat">
+            <string>yyyy-M-d</string>
+           </property>
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="txtTotal_7">
+          <property name="text">
+           <string>合计:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTreeWidget" name="tvList_7">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="miUserMgr">
+   <property name="text">
+    <string>用户管理</string>
+   </property>
+  </action>
+  <action name="miTask">
+   <property name="text">
+    <string>计划任务</string>
+   </property>
+  </action>
+  <action name="miServerStatus">
+   <property name="text">
+    <string>服务器状态</string>
+   </property>
+  </action>
+  <action name="miChangePwd">
+   <property name="text">
+    <string>更改用户密码</string>
+   </property>
+  </action>
+  <action name="miExit">
+   <property name="text">
+    <string>系统退出</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>4</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>4</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

@@ -1,0 +1,6 @@
+011ABAD3                   .  8B8D 50FDFFFF      mov     ecx, dword ptr [ebp-2B0]
+011ABAD9                   .  A1 CC7D3301        mov     eax, dword ptr [1337DCC]                                           ;  TInvQueryForm
+011ABADE                   .  E8 6D020E00        call    0128BD50                                                           ;  ** Create InvQueryForm
+011ABAE3                      8985 04FDFFFF      mov     dword ptr [ebp-2FC], eax                                           ;  var xx :=
+011ABAE9                   .  E9 9A000000        jmp     011ABB88
+

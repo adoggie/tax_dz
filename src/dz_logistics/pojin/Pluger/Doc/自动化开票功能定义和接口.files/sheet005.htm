@@ -1,0 +1,243 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 12">
+<link id=Main-File rel=Main-File href="../自动化开票功能定义和接口.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(4);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../自动化开票功能定义和接口.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link=blue vlink=purple>
+
+<table border=0 cellpadding=0 cellspacing=0 width=547 style='border-collapse:
+ collapse;table-layout:fixed;width:411pt'>
+ <col width=72 span=4 style='width:54pt'>
+ <col width=126 style='mso-width-source:userset;mso-width-alt:4032;width:95pt'>
+ <col width=133 style='mso-width-source:userset;mso-width-alt:4256;width:100pt'>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 width=72 style='height:13.5pt;width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=126 style='width:95pt'></td>
+  <td width=133 style='width:100pt'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 style='height:16.5pt'></td>
+  <td class=xl67></td>
+  <td class=xl67>开票信息</td>
+  <td colspan=2 class=xl67 style='mso-ignore:colspan'></td>
+  <td></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 style='height:16.5pt'></td>
+  <td colspan=4 class=xl67 style='mso-ignore:colspan'></td>
+  <td></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 style='height:16.5pt'></td>
+  <td class=xl67>分隔符1</td>
+  <td class=xl67>分隔符2</td>
+  <td class=xl67>字段</td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=24 class=xl72 style='border-bottom:.5pt solid black'>~+f3+~</td>
+  <td rowspan=12 class=xl76 style='border-bottom:.5pt solid black'>~+f1+~</td>
+  <td class=xl77 style='border-left:none'>tax_rate</td>
+  <td class=xl78>　</td>
+  <td class=xl84 style='border-left:none'>税率</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 colspan=2 style='mso-ignore:colspan;border-right:.5pt solid black'>cust_name</td>
+  <td class=xl85 style='border-top:none;border-left:none'>客户名称<ruby><font
+  class="font14"><rt class=font14></rt></font></ruby></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 colspan=2 style='mso-ignore:colspan;border-right:.5pt solid black'>cust_tax_code</td>
+  <td class=xl85 style='border-top:none;border-left:none'>客户税号<ruby><font
+  class="font14"><rt class=font14></rt></font></ruby></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 colspan=2 style='mso-ignore:colspan;border-right:.5pt solid black'>cust_address_tel</td>
+  <td class=xl84 style='border-top:none;border-left:none'>客户地址电话</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 colspan=2 style='mso-ignore:colspan;border-right:.5pt solid black'>cust_bank_account</td>
+  <td class=xl84 style='border-top:none;border-left:none'>客户银行帐号</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 style='border-top:none;border-left:none'>memo</td>
+  <td class=xl78 style='border-top:none'>　</td>
+  <td class=xl84 style='border-top:none;border-left:none'>备注</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 colspan=2 style='mso-ignore:colspan;border-right:.5pt solid black'>seller_bank_account</td>
+  <td class=xl75 style='border-top:none;border-left:none'>销方银行帐号</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 style='border-top:none;border-left:none'>checker</td>
+  <td class=xl78 style='border-top:none'>　</td>
+  <td class=xl84 style='border-top:none;border-left:none'>复核人</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 style='border-top:none;border-left:none'>payee</td>
+  <td class=xl78 style='border-top:none'>　</td>
+  <td class=xl84 style='border-top:none;border-left:none'>收款人</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 style='border-top:none;border-left:none'>red_nr</td>
+  <td class=xl78 style='border-top:none'>　</td>
+  <td class=xl84 style='border-top:none;border-left:none'>负数红冲号</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 colspan=2 style='mso-ignore:colspan;border-right:.5pt solid black'>region_inv_code</td>
+  <td class=xl84 style='border-top:none;border-left:none'>负数开票相关的原始<span
+  style='display:none'>发票代码</span></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl77 colspan=2 style='mso-ignore:colspan;border-right:.5pt solid black'>region_inv_number</td>
+  <td class=xl84 style='border-top:none;border-left:none'>负数开票相关的原始<span
+  style='display:none'>发票编号</span></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=12 class=xl81 style='border-top:none'>~+f2+~</td>
+  <td rowspan=6 class=xl82 style='border-top:none'>~+f1+~</td>
+  <td class=xl83 style='border-top:none;border-left:none'>item_name</td>
+  <td class=xl85 style='border-top:none;border-left:none'>商品名称<ruby><font
+  class="font14"><rt class=font14></rt></font></ruby></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>unit</td>
+  <td class=xl84 style='border-top:none;border-left:none'>计量单位</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>spec</td>
+  <td class=xl85 style='border-top:none;border-left:none'>规格<ruby><font
+  class="font14"><rt class=font14></rt></font></ruby></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>price</td>
+  <td class=xl84 style='border-top:none;border-left:none'>单价</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>qty</td>
+  <td class=xl84 style='border-top:none;border-left:none'>数量</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>amount</td>
+  <td class=xl84 style='border-top:none;border-left:none'>金额</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=6 class=xl82 style='border-top:none'>~+f1+~</td>
+  <td class=xl83 style='border-top:none;border-left:none'>item_name</td>
+  <td class=xl86 style='border-top:none;border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>unit</td>
+  <td class=xl86 style='border-top:none;border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>spec</td>
+  <td class=xl86 style='border-top:none;border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>price</td>
+  <td class=xl86 style='border-top:none;border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>qty</td>
+  <td class=xl86 style='border-top:none;border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl83 style='border-top:none;border-left:none'>amount</td>
+  <td class=xl86 style='border-top:none;border-left:none'>　</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=126 style='width:95pt'></td>
+  <td width=133 style='width:100pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

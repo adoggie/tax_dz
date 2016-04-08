@@ -1,0 +1,22 @@
+// 专用开票.模式窗口.
+0123B519          .  8B15 309C3501 mov     edx, dword ptr [1359C30]                ;  MakeOutI._SpecInvoiceForm
+0123B51F          .  8B02          mov     eax, dword ptr [edx]
+0123B521          .  8B10          mov     edx, dword ptr [eax]
+0123B523          .  FF92 E8000000 call    dword ptr [edx+E8]                      ;  <jmp.&vcl60.Forms::TCustomForm::ShowModal>
+
+dword ptr [edx+E8]:
+012D14C0    .- FF25 84F23501 jmp     dword ptr [<&vcl60.Forms::TCustomForm::ShowModal>]               ;  vcl60.Forms::TCustomForm::Show
+装jmp的目标设为<&vcl60.Forms::TCustomForm::Show>
+
+<&vcl60.Forms::TCustomForm::Show> = <&vcl60.Forms::TCustomForm::ShowModal> - 0xB0
+
+
+fix1
+0123B53E            /E9 16120000   jmp     0123C759
+0123B543            |90            nop
+
+
+fix2
+011A6FBF          .  85DB          test    ebx, ebx
+011A6FC1             EB 2A         jmp     short 011A6FED
+

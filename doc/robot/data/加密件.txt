@@ -1,0 +1,19 @@
+k-001
+PID: 66E3EDFF
+SOPIN:66E3EDFF337C8A44
+seek: import sys,os,os.path,time,struct,traceback,
+USER-PIN-generator:mniu.net
+USER-PIN:7747ee83cc1f779e
+tax-code:
+encrypt-code:
+
+
+>>> hashlib.md5('sw2us.com').hexdigest()[:16]
+'7747ee83cc1f779e'
+
+
+È«¸ñtaxcode:310112687320368
+0 - taxcode 
+20 - crypt_text
+
+crypt_text: acd4c840

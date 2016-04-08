@@ -1,0 +1,203 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 12">
+<link id=Main-File rel=Main-File href="../自动化开票功能定义和接口.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+<!--table
+	{mso-displayed-decimal-separator:"\.";
+	mso-displayed-thousand-separator:"\,";}
+@page
+	{margin:.75in .7in .75in .7in;
+	mso-header-margin:.3in;
+	mso-footer-margin:.3in;}
+ruby
+	{ruby-align:left;}
+rt
+	{color:windowtext;
+	font-size:9.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	mso-generic-font-family:auto;
+	mso-font-charset:134;
+	mso-char-type:none;
+	display:none;}
+-->
+</style>
+<![if !supportTabStrip]><script language="JavaScript">
+<!--
+function fnUpdateTabs()
+ {
+  if (parent.window.g_iIEVer>=4) {
+   if (parent.document.readyState=="complete"
+    && parent.frames['frTabs'].document.readyState=="complete")
+   parent.fnSetActiveSheet(5);
+  else
+   window.setTimeout("fnUpdateTabs();",150);
+ }
+}
+
+if (window.name!="frSheet")
+ window.location.replace("../自动化开票功能定义和接口.htm");
+else
+ fnUpdateTabs();
+//-->
+</script>
+<![endif]>
+</head>
+
+<body link=blue vlink=purple>
+
+<table border=0 cellpadding=0 cellspacing=0 width=619 style='border-collapse:
+ collapse;table-layout:fixed;width:465pt'>
+ <col width=72 span=5 style='width:54pt'>
+ <col width=126 style='mso-width-source:userset;mso-width-alt:4032;width:95pt'>
+ <col width=133 style='mso-width-source:userset;mso-width-alt:4256;width:100pt'>
+ <tr height=18 style='height:13.5pt'>
+  <td height=18 width=72 style='height:13.5pt;width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=126 style='width:95pt'></td>
+  <td width=133 style='width:100pt'></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67></td>
+  <td class=xl67 colspan=2 style='mso-ignore:colspan'>发票导出信息</td>
+  <td class=xl67></td>
+  <td></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td class=xl67 colspan=4 style='mso-ignore:colspan'>发票信息包含主体信息和清单列表信息</td>
+  <td></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 colspan=2 style='height:16.5pt;mso-ignore:colspan'></td>
+  <td colspan=4 class=xl67 style='mso-ignore:colspan'></td>
+  <td></td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 style='height:16.5pt'></td>
+  <td colspan=6 class=xl87>多张发票</td>
+ </tr>
+ <tr height=22 style='height:16.5pt'>
+  <td height=22 style='height:16.5pt'></td>
+  <td class=xl88>　</td>
+  <td colspan=5 class=xl113 style='border-left:none'>单张发票</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=13 class=xl89 style='border-bottom:.5pt solid black'>~+f4+~</td>
+  <td rowspan=6 class=xl110 style='border-bottom:.5pt solid black'>~+f3+~</td>
+  <td rowspan=2 class=xl76 style='border-bottom:.5pt solid black'>~+f1+~</td>
+  <td class=xl103 style='border-left:none'>主体信息字<span style='display:none'>段</span></td>
+  <td class=xl104 style='border-left:none'>　</td>
+  <td class=xl105 style='border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl106 style='border-left:none'>主体信息字<span style='display:none'>段</span></td>
+  <td class=xl107 style='border-left:none'>　</td>
+  <td class=xl108 style='border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=4 class=xl109 style='border-bottom:.5pt solid black;border-top:
+  none'>~+f2+~</td>
+  <td rowspan=2 class=xl109 style='border-bottom:.5pt solid black;border-top:
+  none'>~+f1+~</td>
+  <td class=xl96 style='border-left:none'>商品项目</td>
+  <td class=xl94 style='border-left:none'>商品名称<ruby><font class="font14"><rt
+  class=font14></rt></font></ruby></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl101 style='border-left:none'>商品项目</td>
+  <td class=xl114 style='border-left:none'>计量单位</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=2 class=xl95 style='border-bottom:.5pt solid black'>~+f1+~</td>
+  <td class=xl96 style='border-left:none'>商品项目</td>
+  <td class=xl97 style='border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl101 style='border-left:none'>商品项目</td>
+  <td class=xl102 style='border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl116 style='border-top:none'>　</td>
+  <td class=xl116 style='border-top:none'>　</td>
+  <td class=xl116 style='border-top:none'>　</td>
+  <td class=xl117 style='border-top:none'>　</td>
+  <td class=xl118 style='border-top:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=6 class=xl90 style='border-bottom:.5pt solid black'>~+f3+~</td>
+  <td rowspan=2 class=xl76 style='border-bottom:.5pt solid black'>~+f1+~</td>
+  <td class=xl91 style='border-left:none'>主体信息字<span style='display:none'>段</span></td>
+  <td class=xl92 style='border-left:none'>　</td>
+  <td class=xl93 style='border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl106 style='border-left:none'>主体信息字<span style='display:none'>段</span></td>
+  <td class=xl107 style='border-left:none'>　</td>
+  <td class=xl94 style='border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=4 class=xl95 style='border-bottom:.5pt solid black'>~+f2+~</td>
+  <td rowspan=2 class=xl109 style='border-bottom:.5pt solid black;border-top:
+  none'>~+f1+~</td>
+  <td class=xl96 style='border-left:none'>商品项目</td>
+  <td class=xl94 style='border-left:none'>商品名称<ruby><font class="font14"><rt
+  class=font14></rt></font></ruby></td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl101 style='border-left:none'>商品项目</td>
+  <td class=xl114 style='border-left:none'>计量单位</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td rowspan=2 class=xl95 style='border-bottom:.5pt solid black'>~+f1+~</td>
+  <td class=xl96 style='border-left:none'>商品项目</td>
+  <td class=xl97 style='border-left:none'>　</td>
+ </tr>
+ <tr height=23 style='height:17.25pt'>
+  <td height=23 style='height:17.25pt'></td>
+  <td class=xl101 style='border-left:none'>商品项目</td>
+  <td class=xl102 style='border-left:none'>　</td>
+ </tr>
+ <![if supportMisalignedColumns]>
+ <tr height=0 style='display:none'>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=72 style='width:54pt'></td>
+  <td width=126 style='width:95pt'></td>
+  <td width=133 style='width:100pt'></td>
+ </tr>
+ <![endif]>
+</table>
+
+</body>
+
+</html>

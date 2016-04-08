@@ -1,0 +1,6 @@
+
+1.关闭 统计查询 软件 
+2.将form_statistic.py 拷贝到 目录下（选择覆盖)
+	c:\sw2us.webgis.demo\source\dz_statistic
+3.启动 统计查询 软件 
+   最新版本 v0.2.2.0 2013/7/14
